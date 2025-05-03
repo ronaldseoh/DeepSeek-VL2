@@ -1759,6 +1759,7 @@ class DeepseekV2ForCausalLM(DeepseekV2PreTrainedModel):
             **kwargs,
     ):
         past_length = 0
+        past_key_values = None
         if past_key_values is not None:
             if isinstance(past_key_values, Cache):
                 cache_length = past_key_values.get_seq_length()
